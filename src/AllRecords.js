@@ -7,6 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
   StatusBar,
+  Alert,
 } from 'react-native';
 import {BarChart} from 'react-native-chart-kit';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -40,7 +41,7 @@ const AllRecords = () => {
       setAllMetrics([]);
       setMaxStrength(0);
       setMaxSpeed(0);
-      console.log('Metrics cleared');
+     Alert.alert('Metrics cleared');
     } catch (error) {
       console.error('Error clearing data:', error);
     }
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 16,
     paddingBottom: 20,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#fff',
   },
   header: {
     fontSize: 24,
